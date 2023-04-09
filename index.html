@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Call from URL</title>
+  </head>
+  <body>
+    <script>
+      // Get the value of the "tel" parameter from the URL
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const tel = urlParams.get('tel');
+
+      // Create a call link
+      const callLink = "tel:" + tel.replace(/[^0-9]/g, '');
+
+      // Open the call link when the page loads
+      window.location.href = callLink;
+    </script>
+  </body>
+</html>
