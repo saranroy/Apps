@@ -11,11 +11,11 @@
       const call = urlParams.get('call');
 
       // Create a call link
-      const callLink = "tell:" + call.replace(/[^0-9]/g, '');
+      const callLink = "tel:" + call.replace(/[^0-9]/g, '');
       // alert(callLink);
 
       // Open the call link when the page loads
-      window.open(callLink);
+      window.open(callLink, "_self");
     </script>
   </body>
 </html>
