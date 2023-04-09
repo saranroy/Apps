@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Call from URL</title>
   </head>
   <body>
+    <div onclick="call()" style="font-size:36px, font-weight:bold">
+    👉 Click here if not redirected automatically.
+    </div>
     <script>
       // Get the value of the "call" parameter from the URL
       const queryString = window.location.search;
@@ -16,6 +18,10 @@
 
       // Open the call link when the page loads
       window.open(callLink, "_self");
+      
+      function call() {
+        window.open(callLink, "_self");
+      }
     </script>
   </body>
 </html>
