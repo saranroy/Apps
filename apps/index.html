@@ -4,6 +4,17 @@
     <title>Call from URL</title>
   </head>
   <body>
-    Yo
+    <script>
+      // Get the value of the "call" parameter from the URL
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const call = urlParams.get('call');
+
+      // Create a call link
+      const callLink = "call:" + call.replace(/[^0-9]/g, '');
+
+      // Open the call link when the page loads
+      window.location.href = callLink;
+    </script>
   </body>
 </html>
